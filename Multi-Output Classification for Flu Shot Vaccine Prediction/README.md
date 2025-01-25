@@ -71,7 +71,7 @@ The Random Forest Classifier's robust feature importance estimation helped refin
   3. Random Forest Classifier
   4. XGBoost Classifier (XGB)
 
-**Step 4 : Model Optimization**
+**Step 4 : Hyperparameter Tuning**
 - After analyzing the baseline models, hyperparameter optimization was performed on Random Forest classfier to further improve the AUROC scores.
 - Techniques such as grid search and random search were employed to fine-tune model parameters.
 
