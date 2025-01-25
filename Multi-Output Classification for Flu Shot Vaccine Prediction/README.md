@@ -34,64 +34,48 @@ Several approaches exist for handling multi-output classification problems.Below
 
 Given that the target outputs in this dataset are not closely related, the **MultiOutputClassifier** approach was selected for this project.
 
-### Base Classifiers
-The following base classifiers were used to build the predictive models:
-1. Decision Trees
-2. Logistic Regression
-3. Random Forest Classifier
-4. XGBoost Classifier (XGB)
-
-#### Strengths and Usefulness of Models:
+## Machine learning algorithms used
+The following machine learning classifiers were used to build the predictive models:
 1. **Decision Trees**
-   Decision Trees are simple to understand and interpret. They work well with small to medium-sized datasets and handle categorical features effectively. 
-   They provide feature importance scores, which help in identifying key variables contributing to the prediction task. This insight was valuable in understanding the dataset.
-  
-2. **Logistic Regression**
-   This methods is simple and efficient for binary classification tasks, with interpretability and low computational requirements. It assumes a linear relationship between features and target variables.
-   Logistic regressions erved as a strong baseline model, providing insights into feature relationships and setting a benchmark for performance.
+      Decision Trees are simple to understand and interpret. They work well with small to medium-sized datasets and handle categorical features effectively. 
+They provide feature importance scores, which help in identifying key variables contributing to the prediction task. This insight was valuable in understanding the dataset.
 
-3. **Random Forest Classifier**
+3. **Logistic Regression**
+   This methods is simple and efficient for binary classification tasks, with interpretability and low computational requirements. It assumes a linear relationship between features and target variables.
+Logistic regressions erved as a strong baseline model, providing insights into feature relationships and setting a benchmark for performance.
+
+5. **Random Forest Classifier**
    Random Forest Classifier is an ensemble method that combines multiple decision trees to improve robustness and accuracy. It handles overfitting better than individual decision trees and works well with both categorical and numerical features.
 The Random Forest Classifier's robust feature importance estimation helped refine the feature set and improve overall model stability and performance.
 
-4. **XGBoost Classifier (XGB)**
+6. **XGBoost Classifier (XGB)**
    It is a gradient boosting framework that is highly efficient, flexible, and accurate. It performs exceptionally well on structured/tabular datasets. XGBoost incorporates regularization techniques to prevent overfitting and supports advanced tuning options.
   XGBoost provided the similar AUROC scores as that of the Random Forest classifiers. Its ability to model complex interactions between features made it an excellent choice for this analysis.
 
-### Exploratory Data Analysis (EDA)
+## Project Workflow
+**Step 1 : Exploratory Data Analysis (EDA)**
 To better understand the dataset, an extensive Exploratory Data Analysis (EDA) was performed:
-Several methoda are used to analyze feature label relationship. For this project Correlation analysis methods is used to analyze this relationship
-
-1. **Correlation Analysis:**
+Several methods are used to analyze feature label relationship. For this project Correlation analysis methods is used to analyze this relationship
 <br>**Pearson Correlation:** Measures the linear relationship between two numerical features, providing a coefficient between -1 (strong negative correlation) and 1 (strong positive correlation).
 <br>**Spearman's Rank Correlation:** Suitable for non-normally distributed data, analyzes the monotonic relationship between variables based on their ranks.
-2. **Chi-Square Test:**
-<br>Used to assess the association between two categorical features, indicating whether there is a statistically significant relationship between the categories.
-3. **Visualization Techniques:**
-<br>**Scatterplots:** Visually represent the relationship between two numerical variables, allowing you to identify patterns like linear trends, outliers, and clusters.
-<br>**Boxplots:** Useful for comparing the distribution of a feature across different label categories.
-4. **Machine Learning Feature Importance:**
-<br>**Decision Trees:** Provide feature importance scores based on how much each feature contributes to the decision-making process.
-<br>**Random Forests:** Ensemble of decision trees, offering more robust feature importance estimations.
 
-
-### Data Preparation
+**Step 2 : Data Preparation**
 1. **Correlation Analysis**: Variables with little or no correlation with both target variables were removed.
 2. **Data Cleaning**: Missing values were handled using appropriate imputation techniques.
 3. **Data Splitting**: The dataset was split into training, validation, and test sets for robust model evaluation.
 
-### Modeling
+**Step 3 : Model Training and Validation**
 Three classification methods were implemented and evaluated:
 1. Decision Trees
 2. Logistic Regression
 3. Random Forest Classifier
 4. XGBoost Classifier (XGB)
 
-#### Model Optimization
+**Step 4 : Model Optimization**
 - After analyzing the baseline models, hyperparameter optimization was performed on Random Forest classfier to further improve the AUROC scores.
 - Techniques such as grid search and random search were employed to fine-tune model parameters.
 
-## Results
+**Step 5 : Results**
 The project was successfully completed as part of the Driven Data competition. The final model achieved a rank in the **top 10%** on the competition leaderboard, showcasing its effectiveness in predicting the likelihood of individuals receiving H1N1 and seasonal flu vaccines.
 
 ## Key Takeaways
