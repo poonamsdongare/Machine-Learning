@@ -18,7 +18,7 @@ This rich dataset provides a foundation for building predictive models to addres
 
 ## Methodology
 ### Multi-Output Classification Approaches
-Several approaches exist for handling multi-output classification problems.Below are some eaxamples
+Several approaches exist for handling multi-output classification problems. Below are some examples:
 
 #### 1. MultiOutputClassifier
 - **What It Does**: Wraps a single-output classifier to handle multiple target variables by creating an independent classifier for each target.
