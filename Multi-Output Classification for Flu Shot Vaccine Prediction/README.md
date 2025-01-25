@@ -65,7 +65,7 @@ The Random Forest Classifier's robust feature importance estimation helped refin
 - **Data Splitting**: The dataset was split into training, validation, and test sets for robust model evaluation.
 
 **Step 3 : Model Training and Validation**
-- Three classification methods were implemented and evaluated:
+- Following classification methods were implemented and evaluated:
   1. Decision Trees
   2. Logistic Regression
   3. Random Forest Classifier
