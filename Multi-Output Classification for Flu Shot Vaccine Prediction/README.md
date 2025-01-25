@@ -36,47 +36,47 @@ Given that the target outputs in this dataset are not closely related, the **Mul
 
 ## Machine learning algorithms used
 The following machine learning classifiers were used to build the predictive models:
-1. **Decision Trees**
+1. **Decision Trees:**
       Decision Trees are simple to understand and interpret. They work well with small to medium-sized datasets and handle categorical features effectively. 
 They provide feature importance scores, which help in identifying key variables contributing to the prediction task. This insight was valuable in understanding the dataset.
 
-3. **Logistic Regression**
+3. **Logistic Regression:**
    This methods is simple and efficient for binary classification tasks, with interpretability and low computational requirements. It assumes a linear relationship between features and target variables.
 Logistic regressions erved as a strong baseline model, providing insights into feature relationships and setting a benchmark for performance.
 
-5. **Random Forest Classifier**
-   Random Forest Classifier is an ensemble method that combines multiple decision trees to improve robustness and accuracy. It handles overfitting better than individual decision trees and works well with both categorical and numerical features.
+5. **Random Forest Classifier:**
+   It is an ensemble method that combines multiple decision trees to improve robustness and accuracy. It handles overfitting better than individual decision trees and works well with both categorical and numerical features.
 The Random Forest Classifier's robust feature importance estimation helped refine the feature set and improve overall model stability and performance.
 
-6. **XGBoost Classifier (XGB)**
+6. **XGBoost Classifier (XGB):**
    It is a gradient boosting framework that is highly efficient, flexible, and accurate. It performs exceptionally well on structured/tabular datasets. XGBoost incorporates regularization techniques to prevent overfitting and supports advanced tuning options.
   XGBoost provided the similar AUROC scores as that of the Random Forest classifiers. Its ability to model complex interactions between features made it an excellent choice for this analysis.
 
 ## Project Workflow
 **Step 1 : Exploratory Data Analysis (EDA)**
-To better understand the dataset, an extensive Exploratory Data Analysis (EDA) was performed:
-Several methods are used to analyze feature label relationship. For this project Correlation analysis methods is used to analyze this relationship
-<br>**Pearson Correlation:** Measures the linear relationship between two numerical features, providing a coefficient between -1 (strong negative correlation) and 1 (strong positive correlation).
-<br>**Spearman's Rank Correlation:** Suitable for non-normally distributed data, analyzes the monotonic relationship between variables based on their ranks.
+- To better understand the dataset, an extensive Exploratory Data Analysis (EDA) was performed:
+- Several methods are used to analyze feature label relationship. For this project Correlation analysis methods is used to analyze this relationship  
+  - **Pearson Correlation:** Measures the linear relationship between two numerical features, providing a coefficient between -1 (strong negative correlation) and 1 (strong positive correlation).
+  - **Spearman's Rank Correlation:** Suitable for non-normally distributed data, analyzes the monotonic relationship between variables based on their ranks.
 
 **Step 2 : Data Preparation**
-1. **Correlation Analysis**: Variables with little or no correlation with both target variables were removed.
-2. **Data Cleaning**: Missing values were handled using appropriate imputation techniques.
-3. **Data Splitting**: The dataset was split into training, validation, and test sets for robust model evaluation.
+- **Correlation Analysis**: Variables with little or no correlation with both target variables were removed.
+- **Data Cleaning**: Missing values were handled using appropriate imputation techniques.
+- **Data Splitting**: The dataset was split into training, validation, and test sets for robust model evaluation.
 
 **Step 3 : Model Training and Validation**
-Three classification methods were implemented and evaluated:
-1. Decision Trees
-2. Logistic Regression
-3. Random Forest Classifier
-4. XGBoost Classifier (XGB)
+- Three classification methods were implemented and evaluated:
+  1. Decision Trees
+  2. Logistic Regression
+  3. Random Forest Classifier
+  4. XGBoost Classifier (XGB)
 
 **Step 4 : Model Optimization**
 - After analyzing the baseline models, hyperparameter optimization was performed on Random Forest classfier to further improve the AUROC scores.
 - Techniques such as grid search and random search were employed to fine-tune model parameters.
 
 **Step 5 : Results**
-The project was successfully completed as part of the Driven Data competition. The final model achieved a rank in the **top 10%** on the competition leaderboard, showcasing its effectiveness in predicting the likelihood of individuals receiving H1N1 and seasonal flu vaccines.
+- The project was successfully completed as part of the Driven Data competition. The final model achieved a rank in the **top 10%** on the competition leaderboard, showcasing its effectiveness in predicting the likelihood of individuals receiving H1N1 and seasonal flu vaccines.
 
 ## Key Takeaways
 - MultiOutputClassifier proved to be an effective approach for this multi-output classification task, given the lack of strong dependency between target variables.
