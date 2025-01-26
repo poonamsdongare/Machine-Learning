@@ -6,7 +6,8 @@ Welcome to my repository! Here, you'll find a collection of machine learning pro
 
 | ID  | Project Name                          | Description | Domain         | Tech Stack | Key Concepts             | Deployment    | GitHub Link |
 |-----|---------------------------------------|-------------|----------------|------------|--------------------------|---------------|-------------|
-| 1   | Flushot prediction                   |             | Healthcare     |            | Multilabel classification | Code Only     |             |
+| 1   | Multi output classification for Flu Shot Vaccine Prediction
+                  |             | Healthcare     |            | Multilabel classification | Code Only     |             |
 | 2   | Obesity prediction                   |             | Healthcare     |            | Multiclass classification | Code Only     |             |
 | 3   | Regression of used car prices        |             | Automotive     |            | Regression               | Deployable    |             |
 | 4   | Detection of hateful memes           |             | Social Media   | CLIP       |                          | Deployable    |             |
