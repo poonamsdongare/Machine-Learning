@@ -52,6 +52,7 @@ Below are the details about the architecture of the custom audio text coacatenat
 
 - The final embedding is constructed by concatenating the audio and transcript embeddings with the task and grade values. This composite embedding is then fed into a classifier head consisting of a fully connected layer. The architecture of this layer, including its size and depth, is determined based on the complexity required to facilitate effective learning while mitigating overfitting. Additionally, dropout layers are incorporated as a regularization mechanism to enhance model generalization.
 - The schematics of the architecture are as follows:
+
 ![Audio and Text concatenated architecture schematic](https://github.com/pnkalan/Goodnight-Moon-Hello-Early-Literacy-Screening/blob/main/audio_text_concat_arch.png)
 
 ## Experimentation and Results
