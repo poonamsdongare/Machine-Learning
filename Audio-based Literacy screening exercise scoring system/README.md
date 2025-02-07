@@ -97,6 +97,7 @@ These are the values of the hyperparameter before tuning:
 2. After applying dropout of 0.3: Very slight improvement but not enough.
 ![Results from Tune 2](Images/plot_tune_2.png)
 3. Using only words for training and validation dataset (non-word samples dropped): Further improvement in validation score, but not enough.
+
 ![Results from Tune 3](Images/plot_tune_3.png)
 4. Remove grade and task inputs:
 ![Results from Tune 4](Images/plot_tune_4.png)
