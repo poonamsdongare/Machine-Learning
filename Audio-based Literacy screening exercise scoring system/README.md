@@ -99,7 +99,9 @@ These are the values of the hyperparameter before tuning:
 
 ## References
 [1] https://www.drivendata.org/competitions/298/literacy-screening/page/925/
+
 [2] https://huggingface.co/openai/whisper-large-v3
+
 [3]https://huggingface.co/docs/transformers/en/model_doc/wav2vec2
 ## Contact
 Contact me at poonamsdongare04@gmail.com to access the complete paper and more information
