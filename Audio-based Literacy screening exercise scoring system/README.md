@@ -99,8 +99,10 @@ These are the values of the hyperparameter before tuning:
 3. Using only words for training and validation dataset (non-word samples dropped): Further improvement in validation score, but not enough.
 
 ![Results from Tune 3](Images/plot_tune_3.png)
+
 4. Remove grade and task inputs:
 ![Results from Tune 4](Images/plot_tune_4.png)
+
 5. Reduce batch size from 128 to 64:
 ![Results from Tune 5](Images/plot_tune_5.png)
 
