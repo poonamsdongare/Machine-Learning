@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Images/Cover.jpg" alt="Description" />
+  <img src="Images/Cover.jpg" alt="Description" width="300" />
 </p>
 
 ## Introduction:
@@ -57,7 +57,9 @@ Below are the details about the architecture of the custom audio text coacatenat
 - The final embedding is constructed by concatenating the audio and transcript embeddings with the task and grade values. This composite embedding is then fed into a classifier head consisting of a fully connected layer. The architecture of this layer, including its size and depth, is determined based on the complexity required to facilitate effective learning while mitigating overfitting. Additionally, dropout layers are incorporated as a regularization mechanism to enhance model generalization.
 - The schematics of the architecture are as follows:
 
-![Audio and Text concatenated architecture schematic](https://github.com/pnkalan/Goodnight-Moon-Hello-Early-Literacy-Screening/blob/main/audio_text_concat_arch.png)
+<p align="center">
+  <img src="Images/audio_text_concat_arch.png" alt="Description" width="500" />
+</p>
 
 ## Experimentation and Results
 We conducted experiments on both the fine-tuned Whisper model and the custom-built models. This section presents the results obtained from the evaluation of both models.
@@ -69,7 +71,7 @@ Validation datasets: 1 samples per unique combinations
 3. Non-words (true positives): label = 1, only non-word samples
 4. Non-words (false positives): label = 0, only non-word samples
 
-![Learning curve](https://github.com/pnkalan/Goodnight-Moon-Hello-Early-Literacy-Screening/blob/main/learning_curve.png)
+![learning_curve](Images/learning_curve.png)
 
 Hence, the model shows good performance if we exclude non-word tasks. We use the model trained till epoch 3 as it shows minimum weighted loss.
 
@@ -89,17 +91,17 @@ These are the values of the hyperparameter before tuning:
 
 ### ii. Hyperparameter tuning
 0. Learning curve for the default hyperparameter values given above: The model quickly overfits to training data. L2 regularization and dropout required. Apply one at a time.
-![Results from Tune 0](https://github.com/pnkalan/Goodnight-Moon-Hello-Early-Literacy-Screening/blob/main/plot_tune_0.png)
+![Results from Tune 0](Images/plot_tune_0.png)
 1. After adding L2 regularization penalty factor of 1e-4: Very slight improvement but not enough. Apply droput in next iteration.
-![Results from Tune 1](https://github.com/pnkalan/Goodnight-Moon-Hello-Early-Literacy-Screening/blob/main/plot_tune_1.png)
+![Results from Tune 1](Images/plot_tune_1.png)
 2. After applying dropout of 0.3: Very slight improvement but not enough.
-![Results from Tune 2](https://github.com/pnkalan/Goodnight-Moon-Hello-Early-Literacy-Screening/blob/main/plot_tune_2.png)
+![Results from Tune 2](Images/plot_tune_2.png)
 3. Using only words for training and validation dataset (non-word samples dropped): Further improvement in validation score, but not enough.
-![Results from Tune 3](https://github.com/pnkalan/Goodnight-Moon-Hello-Early-Literacy-Screening/blob/main/plot_tune_3.png)
+![Results from Tune 3](Images/plot_tune_3.png)
 4. Remove grade and task inputs:
-![Results from Tune 4](https://github.com/pnkalan/Goodnight-Moon-Hello-Early-Literacy-Screening/blob/main/plot_tune_4.png)
+![Results from Tune 4](Images/plot_tune_4.png)
 5. Reduce batch size from 128 to 64:
-![Results from Tune 5](https://github.com/pnkalan/Goodnight-Moon-Hello-Early-Literacy-Screening/blob/main/plot_tune_5.png)
+![Results from Tune 5](Images/plot_tune_5.png)
 
 ## References
 [1] https://www.drivendata.org/competitions/298/literacy-screening/page/925/
