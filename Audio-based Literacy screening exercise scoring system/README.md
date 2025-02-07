@@ -97,6 +97,9 @@ These are the values of the hyperparameter before tuning:
 5. Reduce batch size from 128 to 64:
 ![Results from Tune 5](https://github.com/pnkalan/Goodnight-Moon-Hello-Early-Literacy-Screening/blob/main/plot_tune_5.png)
 
+## References
 
+## Contact
+Contact me at poonamsdongare04@gmail.com to access the complete paper and more information
 
 
