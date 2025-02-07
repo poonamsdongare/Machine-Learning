@@ -1,8 +1,8 @@
 ## Introduction:
-<br> This project was developed as a part of the [Good night moon early literacy program competition](https://www.drivendata.org/competitions/298/). The competition aims to leverage machine learning techniques to evaluate literacy screening exercise audio recordings from children in kindergarten through third grade. The goal is to assist teachers in efficiently and accurately identifying students who require early literacy intervention. Addressing these challenges at the preschool level is crucial, as early literacy development strongly correlates with later academic success.
+<br> This project was developed as a part of the [Good night moon early literacy program competition](https://www.drivendata.org/competitions/298/)[1]. The competition aims to leverage machine learning techniques to evaluate literacy screening exercise audio recordings from children in kindergarten through third grade. The goal is to assist teachers in efficiently and accurately identifying students who require early literacy intervention. Addressing these challenges at the preschool level is crucial, as early literacy development strongly correlates with later academic success.
 
 ## Approach:
-<br> In this project, we leverage state-of-the-art pretrained audio speech recognition models and fine-tune them for our dataset. Specifically, we evaluated OpenAI’s Whisper and Facebook’s wav2vec2 models from the Hugging Face library. A comparative analysis revealed that Whisper outperformed wav2vec2, leading us to adopt it for further experimentation.
+<br> In this project, we leverage state-of-the-art pretrained audio speech recognition models and fine-tune them for our dataset. Specifically, we evaluated OpenAI’s Whisper[2] and Facebook’s wav2vec2 [3] models from the Hugging Face library. A comparative analysis revealed that Whisper outperformed wav2vec2, leading us to adopt it for further experimentation.
 <br> Our initial assessment achieved a log loss (performance metric) value at the 50th percentile. However, we quickly identified that fine-tuning alone was insufficient to achieve significant performance improvements. To address this, we designed a custom Audio-Text Concat model, integrating both audio and text-based features for enhanced recognition. Further details regarding this architecture will be discussed in the **Model Development** section.
 
 ## Environment: 
@@ -98,7 +98,9 @@ These are the values of the hyperparameter before tuning:
 ![Results from Tune 5](https://github.com/pnkalan/Goodnight-Moon-Hello-Early-Literacy-Screening/blob/main/plot_tune_5.png)
 
 ## References
-
+[1] https://www.drivendata.org/competitions/298/literacy-screening/page/925/
+[2] https://huggingface.co/openai/whisper-large-v3
+[3]https://huggingface.co/docs/transformers/en/model_doc/wav2vec2
 ## Contact
 Contact me at poonamsdongare04@gmail.com to access the complete paper and more information
 
